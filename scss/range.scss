@@ -1,0 +1,88 @@
+.range{
+    margin-top:175px;
+
+    @include responsive(mobile){
+        margin-top: 100px;
+      }
+
+    .container{
+
+        .row{
+
+            .text-box{
+                width: 100%;
+                @include displayFlex(column, center, center);
+           
+                h1{
+                   font-family: montserat-bold;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 39px;  
+                    color: #333333;
+                    margin-bottom: 20px;
+
+                    @include responsive(mobile){
+                        font-size: 25px;
+                        margin-bottom: 6px;
+                      }
+                }
+                p{
+                    font-family: montserat-light;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+                    text-align: center;
+                    margin-bottom: 36px;
+
+                    @include responsive(mobile){
+                        font-size: 15px;
+                        margin-bottom: 30px;
+                      }
+
+                }
+            }
+
+            .images{
+                @include displayFlex(row, space-between, center);
+
+                @include responsive(mobile){
+                    width: 100%;
+                    @include displayFlex(column,center, center, 0px);
+                   }
+
+                .img-box{
+                    @include displayFlex(column, center, center);
+                    width:32%;
+                    @include responsive(mobile){
+                        width: 80%;
+                       }
+
+                    img{
+                        width: 100%;
+                        margin-bottom: 20px;
+                        border-radius: 3%;
+                        @include responsive(mobile){
+                            margin-bottom: 8px;
+                           }
+                    }
+                    h3{
+                        font-family: montserat-medium;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 29px;
+                        text-align: center;
+
+                        @include responsive(mobile){
+                            margin-bottom: 40px;
+                           }
+                    }
+
+                }
+               
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+.inspiration{
+    .title{
+        margin-top: 109px;
+        @include displayFlex($direction:column, $justify:center, $align:center );
+
+        @include responsive(mobile){
+            margin-top: 50px;
+          }
+        h2{
+            font-family: montserat-bold;
+            font-style: normal;
+             font-weight: 700;
+            font-size: 32px;
+             line-height: 39px;
+             color: #333333;
+             margin-bottom: 20px;
+
+             @include responsive(mobile){
+                font-size: 25px;
+                margin-bottom: 10px;
+              }
+
+        }
+        p{
+            
+            font-family: montserat-light;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: #666666;
+
+             @include responsive(mobile){
+                font-size: 15px;
+              }
+        }
+    }
+
+    .container{
+
+        .row{
+
+            .collages{
+                margin-top: 80px;
+                width: 100%;
+                position: relative;
+                @include displayFlex($justify:space-between, $align:center);
+                flex-wrap: wrap;
+                @include responsive(laptop){
+                    @include displayFlex($justify:center, $align:center, $gap:50px);
+                }
+
+                @include responsive(mobile){
+                   margin-top: 60px;
+                  }
+
+                img{
+                    width: 31%;
+                    height: fit-content;
+                }
+                img:nth-child(2){
+                    margin-bottom: 80px;
+                    @include responsive(laptop){
+                        margin-bottom:0px;
+                        border-bottom-right-radius: 80px;
+                      }
+                }
+                img:nth-child(1){
+                    border-top-left-radius: 80px;
+                }
+                img:nth-child(3){
+                    border-bottom-right-radius: 80px;
+                    @include responsive(laptop){
+                        display: none;
+                      }
+                    
+                }
+                .img-absolute{
+                    position: absolute;
+                    left:950px;
+                    top:40px;
+                    width: 109px;
+                     height: 291.44px;
+                     @include responsive(laptop){
+                        display: none;
+             
+                      }
+
+                }
+
+            }
+
+        }
+    }
+}

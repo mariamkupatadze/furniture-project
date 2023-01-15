@@ -1,0 +1,102 @@
+.beautify{
+    margin-top:200px;
+
+    @include responsive(mobile){
+       margin-top: 100px;
+      }
+    .container{
+
+        .row{
+            @include  displayFlex($justify:space-between, $align:center);
+            
+            @include responsive(laptop){
+                
+                @include  displayFlex(column, $justify:center, $align:center);
+              
+     
+              }
+
+            .test{
+                width: 500px;
+                @include responsive(laptop){
+                    width: 100%;
+                    @include  displayFlex(column, $justify:center, $align:center);
+                  
+         
+                  }
+                h1{
+                     font-family: montserat-bold;
+                     font-style: normal;
+                     font-weight: 700;
+                      font-size: 32px;
+                      line-height: 39px;
+                      color: #333333;
+                      margin-bottom: 20px;
+                      @include responsive(mobile){
+                        font-size: 25px;
+                        margin-bottom: 10px;
+                      }
+
+                }
+                p{
+                    font-family: montserat-light;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 39px;
+                    color: #666666;
+                    margin-bottom: 30px;
+                     @include responsive(laptop){
+                        width:80%
+                      }
+                     @include responsive(mobile){
+                        font-size: 15px;
+                        line-height: 25px;
+                      }
+                }
+                .btn{
+                     padding:24px 57px;
+                     background: $homeBlue;
+                     border-radius: 50px;
+                     font-family: montserat-bold;
+                     font-style: normal;
+                     font-weight: 700;
+                     font-size: 16px;
+                     line-height: 20px;
+                     text-transform: uppercase;
+                     color: #FFFFFF;
+                     flex: none;
+                     order: 0;
+                     flex-grow: 0;
+                     border:0px;
+                }
+
+            }
+            .image{
+                position: relative;
+              
+                .img-abs{
+                    position: absolute;
+                    top:-130px;
+                    left:-100px;
+                    width:500px;
+                    height:700px;
+                    border-top-left-radius: 50px;
+                    border-bottom-right-radius:50px ;
+                    border-top-right-radius: 2%;
+                    border-bottom-left-radius: 2%;
+                }
+                img{
+                    width:500px;
+                    @include responsive(laptop){
+                        display: none;
+             
+                      }
+                }
+
+            }
+        }
+    }
+
+
+}
