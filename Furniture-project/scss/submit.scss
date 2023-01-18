@@ -1,0 +1,117 @@
+.submit{
+    margin-top: 257px;
+
+    
+    @include responsive(mobile){
+        margin-top: 145px;
+
+       }
+
+    .container{
+
+        .row{
+            flex-direction:column;
+            .title{
+                @include displayFlex(column,center, center, 10px );
+
+
+                h1{
+                    font-family: montserat-bold;
+                    font-style: normal;
+                    font-weight: 700;
+                     font-size: 32px;
+                     line-height: 39px;
+                     text-align: center;
+                     color: #333333;
+
+                }
+                p{
+                    font-family: montserat-light;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 39px;
+                    text-align: center;
+                    color: #666666;
+
+                    @include responsive(mobile){
+                        font-size: 15px;
+                        line-height: 29px;
+
+                       }
+
+                }
+            }
+
+            .submit-input{
+                margin-top: 50px;
+                @include displayFlex(row,center, center, 0px );
+                position: relative;
+
+                .input-box{
+                    position: relative;
+
+
+                    .animation{
+                        width: 333px;
+                        padding: 26px 133px 26px 25px;
+                        border: 1px solid #054C73;
+                        border-top-left-radius: 3px;
+                        border-bottom-left-radius: 3px;
+
+                        @include responsive(mobile){
+                            padding: 21px 10px 23px 10px;
+                            width: 233px;
+
+                           }
+
+                        & + label{
+                            font-family: montserat-light;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 20px;
+                            color: #011C42;
+                            opacity: 0.3;
+                            position: absolute;
+                            left: 13px;
+                            top: 25px;
+                            transition: 1s;
+                            cursor: text;
+                        }
+
+                        &:focus + label{
+                            top: -35px;
+                            left:0px;
+                            font-size: 18px;
+                        }
+                        
+                    }
+
+                }
+
+                .sub{
+                    padding: 24px 45px 24px 44px;
+                    font-family: montserat-bold;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                     line-height: 20px;
+                    color: #FFFFFF;
+                    background: #054C73;
+                    border: 1px solid #011C42;
+                    border-top-right-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                    cursor: pointer;
+
+                    @include responsive(mobile){
+                        padding: 20px 20px 20px 20px;
+                        font-size: 12px;
+
+                       }
+                }
+
+            }
+        }
+    }
+}
